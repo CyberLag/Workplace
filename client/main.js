@@ -1,6 +1,7 @@
 import React from "react";
 import ReactROM from "react-dom";
 import App from "./components/app";
+import BinsEditor from "../client/components/bin/binseditor";
 
 import Header from "./components/Header";
 
@@ -12,6 +13,7 @@ from "react-router-dom";
 import BinsList  from "../client/components/bin/bins_list";
 import BinsMain from "../client/components/bin/bins_main";
 
+
 const NotFound=() => (<div>404- Hittades ej 
     <Link to="/">Tillbaka</Link> </div>);
 const Routes = (
@@ -21,6 +23,7 @@ const Routes = (
 <Switch>
 <Route path="/" component= {App} exact={true}/>
 <Route path="/binsmain/:id" component= {BinsMain} />
+<Route path="/bin/:id" component={BinsEditor}/>
 <Route  component= {NotFound}/>
     </Switch>
     </div>

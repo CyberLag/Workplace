@@ -13,7 +13,7 @@ class BinsList extends React.Component{
 
 
         return this.props.bins.map( bin => {
-            const url=`/bin/${bin._id}`;
+            const url="/bin/" + bin._id;
             return (
                 <li className="list-group-item" 
                 key= {bin._id}>
